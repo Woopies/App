@@ -2,7 +2,7 @@ package Monster;
 
 public class Yggdrasil extends de.test.dnmonsters.Monster{
 	public Yggdrasil(int level){
-		this.stats.set_lifemax((int)Math.random()*8-4+150);
+		this.stats.set_lifemax(150+(int)Math.random()*8-4);
 		this.stats.set_physdmg(20+(int)Math.random()*4-2);
 		this.stats.set_physdeff(30+(int)Math.random()*4-2);
 		this.stats.set_dodge(0);

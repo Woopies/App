@@ -2,7 +2,7 @@ package de.test.dnmonsters;
 
 public class Stats {
 	private int level=1;
-	private int life;
+	private int life=0;
 	private int energy;
 	private int physdmg=0;
 	private int physdeff=0;
@@ -74,6 +74,9 @@ public class Stats {
 	}
 	public void set_exp(int e){
 		exp+=e;
+	}
+	public  void set_life(int l){
+		life=life+l;
 	}
 	
 }

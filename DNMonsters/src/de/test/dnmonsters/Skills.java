@@ -1,8 +1,9 @@
 package de.test.dnmonsters;
 
 public class Skills {
-	public int type;
-	public int costs;
-	public int heal;
-	
+	public Object attack;
+
+	public attack(Monster m1, Monster m2){
+		
+	}
 }

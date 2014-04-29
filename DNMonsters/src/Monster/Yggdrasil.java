@@ -10,7 +10,8 @@ public class Yggdrasil extends de.test.dnmonsters.Monster{
 		this.stats.set_eledeff(27+(int)Math.random()*4-2);
 		this.stats.set_speed(20+(int)Math.random()*2-1);
 		this.stats.set_precision(5+(int)Math.random()*2-1);
-		
+		this.klasse[1].set_Klasse("Lux");
+		this.klasse[0].set_Klasse("Flora");
 		if(level!=1)
 		{
 			this.stats.level_up_lifetank(level-1);

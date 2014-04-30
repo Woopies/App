@@ -66,3 +66,38 @@ public class MainActivity extends ActionBarActivity {
     }
 
 }
+public class GameActivity extends BaseGameActivity
+{
+	public EngineOptions onCreateEngineOptions()
+	{
+		return null;
+	}
+	
+	public void onCreateResources(OnCreateResourcesCallback pOnCreateResourcesCallback) throwss IOException
+	{
+	
+	}
+	public void onCreateScene(OnCreateSceneCallback pOnCreateSceneCallback) throws IOException
+	{
+	
+	}
+	public void onPopulateScene(Scene pScene, OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException
+	{
+	
+	}
+}
+@Override
+public Engine onCreateEngine (EngineOptions pEngineOptions)
+{
+	return new LimitedFPSEngine(pEngineOptions, 60);
+}
+private Camera camera;
+
+public EngineOptions onCreateEngineOptions()
+{
+	camera = new camera(0, 0, 800, 480);
+	EngineOptions engineOptions = new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, new RationResolutionPolicy(800, 480), this.camera);
+	engineOptions.getAudioOptions().setNeesdMusic(true).setNeedsSound(true);
+	engineOptions.setWakeLockOptions(WakeLockOptions.SCREEN_ON);
+	return engineOptions;
+}

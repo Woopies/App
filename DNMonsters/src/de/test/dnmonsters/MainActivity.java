@@ -66,6 +66,8 @@ public class MainActivity extends ActionBarActivity {
     }
 
 }
+
+//Ungefährer aufbau für die AndEngine//
 public class GameActivity extends BaseGameActivity
 {
 	public EngineOptions onCreateEngineOptions()

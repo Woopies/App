@@ -14,92 +14,32 @@ import org.andengine.engine.options.EngineOptions;
 import org.andengine.entity.scene.Scene;
 import org.andengine.ui.activity.BaseGameActivity;
 
-public class MainActivity extends ActionBarActivity {
-
+public class MainActivity extends SimpleBaseGameActivity
+{
+	private Camera camera;
+    private static final int CAMERA_WIDTH = 720;
+    private static final int CAMERA_HEIGHT = 480;
+	
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public EngineOptions onCreateEngineOptions()
+    {
+    	camera = new Camera(0, 0, CAMERA_WIDTH, CAMERA_HEIGHT);
+        EngineOptions engineOptions = new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, 
+        new FillResolutionPolicy(), camera);
+        return engineOptions;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    protected void onCreateResources()
+    {
+  
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
+    @Override
+    protected Scene onCreateScene()
+    {
+    	Scene scene = new Scene();
+    	scene.setBackground(new Background(0.09804f, 0.6274f, 0.8784f));
+    	return scene;
     }
-
-}
-
-//Ungefährer aufbau für die AndEngine//
-public class GameActivity extends BaseGameActivity
-{
-	public EngineOptions onCreateEngineOptions()
-	{
-		return null;
-	}
-	
-	public void onCreateResources(OnCreateResourcesCallback pOnCreateResourcesCallback) throwss IOException
-	{
-	
-	}
-	public void onCreateScene(OnCreateSceneCallback pOnCreateSceneCallback) throws IOException
-	{
-	
-	}
-	public void onPopulateScene(Scene pScene, OnPopulateSceneCallback pOnPopulateSceneCallback) throws IOException
-	{
-	
-	}
-}
-@Override
-public Engine onCreateEngine (EngineOptions pEngineOptions)
-{
-	return new LimitedFPSEngine(pEngineOptions, 60);
-}
-private Camera camera;
-
-public EngineOptions onCreateEngineOptions()
-{
-	camera = new camera(0, 0, 800, 480);
-	EngineOptions engineOptions = new EngineOptions(true, ScreenOrientation.LANDSCAPE_FIXED, new RationResolutionPolicy(800, 480), this.camera);
-	engineOptions.getAudioOptions().setNeesdMusic(true).setNeedsSound(true);
-	engineOptions.setWakeLockOptions(WakeLockOptions.SCREEN_ON);
-	return engineOptions;
 }

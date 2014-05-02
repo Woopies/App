@@ -10,7 +10,8 @@ public class Verwurzeln extends de.test.dnmonsters.Skills {
 				Angreifer.stats.set_reg(absorb);
 			}
 		else{
-			//Output ausgewichen!!!!
+			return;
+			//Text output "Ausgeweichen"
 		}
 	}
 	public Verwurzeln(de.test.dnmonsters.Monster Angreifer, de.test.dnmonsters.Monster Verteidiger){

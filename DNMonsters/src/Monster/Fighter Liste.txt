@@ -4,10 +4,10 @@ Liste der vorhandenen Fighter:
 	Oktakel		, der windende Haufen		Oktopus		Mutant/Aqua
 	Bombardyr	, Insekt aus der Hoelle		Kaefer		Arthropode/Pyro
 	Lektropard	, flinker Blitz			Gepard		Mammalia/Elektro
-
-Liste der ausstehenden Fighter:
+	Fenriot		, Schattenwolf			Wolf		Mammalia/Nox
+	Vulkanura	, rauchender Frosch		Frosch		Amphibia/Pyro
 	Vipotter	, Giftschlange			Viper		Reptilia/Toxi
 	Aerayal		, Wolkenmanta			Mantarochen	Ichthys(griechisch für Fisch)/Aero
 	Gastorex	, Terrorvogel			Gastornis	Aves/Terra
-	Vulkanura	, rauchende Frosch		Frosch		Amphibia/Pyro
-	Fenriot		, Schattenwolf			Wolf		Mammalia/Nox
+
+Liste der ausstehenden Fighter:	

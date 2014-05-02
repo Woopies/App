@@ -1,4 +1,6 @@
 package Monster;
+import de.test.dnmonsters.Skills;
+import Skills.Verwurzeln;
 
 public class Yggdrasil extends de.test.dnmonsters.Monster{
 	public Yggdrasil(int level){
@@ -12,6 +14,8 @@ public class Yggdrasil extends de.test.dnmonsters.Monster{
 		this.stats.set_precision(5+(int)Math.random()*2-1);
 		this.klasse[1].set_Klasse("Lux");
 		this.klasse[0].set_Klasse("Flora");
+		this.skills[0]=new Skills;
+		
 		if(level!=1)
 		{
 			this.stats.level_up_lifetank(level-1);

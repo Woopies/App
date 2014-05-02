@@ -15,6 +15,15 @@ public class Stats {
 	private int expnext=100;
 	private int precision=0;
 	private int dodge=0;
+	private int reg=0;
+	
+	public int get_reg(){
+		return reg;
+	}
+	
+	public void set_reg(int s){
+		reg+=s;
+	}
 
 	public int get_dodge(){
 		return dodge;

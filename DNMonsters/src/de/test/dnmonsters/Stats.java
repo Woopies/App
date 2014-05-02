@@ -17,7 +17,7 @@ public class Stats {
 	private int dodge=0;
 	private int reg=0;
 	
-	public int get_reg(){
+	public int get_reg(){ //If Monster in Fight True or not?, abfrage ob reg ja oder nein//
 		return reg;
 	}
 	

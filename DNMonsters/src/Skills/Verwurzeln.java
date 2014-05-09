@@ -1,7 +1,9 @@
 package Skills;
 
-public class Verwurzeln extends de.test.dnmonsters.Skills {
-	@Override public void attack(de.test.dnmonsters.Monster Angreifer, de.test.dnmonsters.Monster Verteidiger){
+public class Verwurzeln extends Skills {
+	private int costs=15;
+	
+	public static void attack(de.test.dnmonsters.Monster Angreifer, de.test.dnmonsters.Monster Verteidiger){
 		float ausweich=(int)(Verteidiger.stats.get_dodge()/Angreifer.stats.get_speed()+Math.random());
 		Angreifer.stats.set_energy(-12);
 		if (ausweich<1){

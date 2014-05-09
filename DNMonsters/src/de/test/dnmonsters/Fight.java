@@ -9,30 +9,10 @@ public class Fight {
 			int option=1;//1bis 3(1 Angriff, 2Beutel, 3Wechsel)
 			//abfrage
 			if (option==1){
-					//abfrage option für attacken
-			
-		
-					switch (option){
-						case 1: { m1.skills[0].attack(m1, m2);
-								break;
-								}
-						case 2: {
-								m1.skills[1].attack(m1, m2);
-								break;
-							}
-						case 3: {
-								m1.skills[1].attack(m1, m2);
-								break;
-						}
-						case 4: {
-								m1.skills[1].attack(m1, m2);
-								break;
-						}
-			
-				}
-			}	
-		}
-		
-	
+				int chosen;
+				//auswahl über menü/buttons zuweisung chosen
+				m1.select_attack(chosen, m1);	
+			}
+		}	
 	}
 }

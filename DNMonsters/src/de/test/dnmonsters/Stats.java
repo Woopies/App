@@ -35,21 +35,7 @@ public class Stats {
 	public int get_level(){
 		return level;
 	}
-	public void level_up_lifetank(int l){
-		if(level==50){
-			return;
-		}
-		level=level+l;
-		lifemax=lifemax+(int)0.1*lifemax+(int)(Math.random()*(10-7)+7);
-		physdmg=physdmg+(int)(Math.random()*(3-1)+1);
-		physdeff=physdeff+(int)(Math.random()*(4-2)+2);
-		eledmg=eledmg+(int)(Math.random()*(3-1)+1);
-		eledeff=eledeff+(int)(Math.random()*(4-2)+2);
-		speed=speed+(int)(Math.random()*(4-2)+2);
-		exp=0;
-		expnext=(int)(expnext*(Math.random()+1));
-		
-	}
+	
 	public int get_physdmg(){
 		return physdmg;
 	}
@@ -101,6 +87,9 @@ public class Stats {
 	public void set_exp(int e){
 		exp+=e;
 	}
+	public void reset_exp(){
+		exp=0;
+	}
 	public  void set_lifemax(int l){
 		lifemax=lifemax+l;
 		life=lifemax;
@@ -111,6 +100,9 @@ public class Stats {
 		{
 			life=lifemax;
 		}
+	}
+	public void set_expnext(int e){
+		expnext=e;
 	}
 	public void set_precision(int p){
 		precision=precision+p;

@@ -1,0 +1,13 @@
+Liste der vorhandenen Fighter:
+	Yggdrasil	, Weltenbaum			Baum		Flora/Lux
+	Golemat		, Schlammgigant			Golem		Mutant/Terra
+	Oktakel		, der windende Haufen		Oktopus		Mutant/Aqua
+	Bombardyr	, Insekt aus der Hoelle		Kaefer		Arthropode/Pyro
+	Lektropard	, flinker Blitz			Gepard		Mammalia/Elektro
+	Fenriot		, Schattenwolf			Wolf		Mammalia/Nox
+	Vulkanura	, rauchender Frosch		Frosch		Amphibia/Pyro
+	Vipotter	, Giftschlange			Viper		Reptilia/Toxi
+	Aerayal		, Wolkenmanta			Mantarochen	Ichthys(griechisch für Fisch)/Aero
+	Gastorex	, Terrorvogel			Gastornis	Aves/Terra
+
+Liste der ausstehenden Fighter:	
